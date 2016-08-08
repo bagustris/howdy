@@ -135,3 +135,160 @@ Hello world in many languages
 
         $ nodejs nodejs//howdy.js 
    ====> NodeJS: Howdy, Windows!
+
+
+    C
+
+    Installation
+
+$ sudo apt install -y gcc
+
+    Code: c/howdy.c
+
+#include <stdio.h>
+
+int main() {
+
+       printf("    ====> C: Howdy, Windows!\n");
+
+       return 0;
+
+}
+
+    Compilation
+
+$ gcc -o c/howdy c/howdy.c
+
+    Execution
+
+        $ ./c/howdy
+
+   ====> C: Howdy, Windows!
+
+    C++
+
+    Installation
+
+$ sudo apt install -y g++
+
+    Code: cpp/howdy.cpp
+
+        #include <iostream>
+
+int main() {
+
+       std::cout << "    ====> C++: Howdy, Windows!\n";
+
+}
+
+    Compilation
+
+$ g++ -o cpp/howdy cpp/howdy.cpp
+
+    Execution
+
+        $ ./cpp/howdy
+
+   ====> C++: Howdy, Windows!
+
+    Golang
+
+    Installation
+
+$ sudo apt install -y golang
+
+    Code: golang/howdy.go
+
+        package main
+
+import "fmt"
+
+func main() {
+
+       fmt.Printf("    ====> Golang: Howdy, Windows!\n")
+
+}
+
+    Compilation
+
+$ go build -o golang/howdy golang/howdy.go
+
+    Execution
+
+        $ ./golang/howdy
+
+   ====> Golang: Howdy, Windows!
+
+    Fortran
+
+    Installation
+
+$ sudo apt install -y gfortran
+
+    Code: fortran/howdy.f90
+
+            program howdy
+
+ print *, "    ====> Fortran: Howdy, Windows!"
+
+end program howdy
+
+    Compilation
+
+$ gfortran fortran/howdy.f90 -o fortran/howdy
+
+    Execution
+
+        $ ./fortran/howdy
+
+    ====> Fortran: Howdy, Windows!
+
+    Pascal
+
+    Installation
+
+$ sudo apt install -y fp-compiler
+
+    Code: pascal/howdy.pas
+
+        program Howdy;
+
+Begin
+
+       writeln('    ====> Pascal: Howdy, Windows!');
+
+end.
+
+    Compilation
+
+$ pc pascal/howdy.pas
+
+    Execution
+
+        $ ./pascal/howdy
+
+   ====> Pascal: Howdy, Windows!
+
+    Erlang
+
+    Installation
+
+$ sudo apt install -y erlang-base
+
+    Code: erlang/howdy.erl
+
+        -module(howdy).
+
+-export([howdy/0]).
+
+howdy() -> io:fwrite("    ====> Erlang: Howdy, Windows!\n").
+
+    Compilation
+
+$ erlc erlang/howdy.erl
+
+    Execution
+
+        $ erl -noshell -s howdy howdy -s init stop
+
+   ====> Erlang: Howdy, Windows!

@@ -137,157 +137,139 @@ Hello world in many languages
    ====> NodeJS: Howdy, Windows!
 
 
-    C
+6. C
 
     Installation
 
-$ sudo apt install -y gcc
+     $ sudo apt install -y gcc
 
-    Code: c/howdy.c
+  Code: c/howdy.c
 
-#include <stdio.h>
+      #include <stdio.h>
+      int main() {
+      printf("    ====> C: Howdy, Windows!\n");
+      return 0;
+      }
 
-int main() {
+  Compilation
 
-       printf("    ====> C: Howdy, Windows!\n");
+       $ gcc -o c/howdy c/howdy.c
 
-       return 0;
+  Execution
 
-}
-
-    Compilation
-
-$ gcc -o c/howdy c/howdy.c
-
-    Execution
-
-        $ ./c/howdy
+       $ ./c/howdy
 
    ====> C: Howdy, Windows!
 
-    C++
+7. C++
 
-    Installation
+  Installation
 
-$ sudo apt install -y g++
+       $ sudo apt install -y g++
 
-    Code: cpp/howdy.cpp
+  Code: cpp/howdy.cpp
 
-        #include <iostream>
-
-int main() {
-
+       #include <iostream>
+       int main() {
        std::cout << "    ====> C++: Howdy, Windows!\n";
+       }
 
-}
+  Compilation
 
-    Compilation
+       $ g++ -o cpp/howdy cpp/howdy.cpp
 
-$ g++ -o cpp/howdy cpp/howdy.cpp
-
-    Execution
+  Execution
 
         $ ./cpp/howdy
 
    ====> C++: Howdy, Windows!
 
-    Golang
+8. Golang
 
-    Installation
+  Installation
 
-$ sudo apt install -y golang
+       $ sudo apt install -y golang
 
-    Code: golang/howdy.go
+  Code: golang/howdy.go
 
-        package main
+         package main
+         import "fmt"
+         func main() {
+         fmt.Printf("    
+         ====> Golang: Howdy, Windows!\n")
+         }
 
-import "fmt"
+  Compilation
 
-func main() {
+       $ go build -o golang/howdy golang/howdy.go
 
-       fmt.Printf("    ====> Golang: Howdy, Windows!\n")
-
-}
-
-    Compilation
-
-$ go build -o golang/howdy golang/howdy.go
-
-    Execution
+  Execution
 
         $ ./golang/howdy
 
    ====> Golang: Howdy, Windows!
 
-    Fortran
+9. Fortran
 
-    Installation
+  Installation
 
-$ sudo apt install -y gfortran
+       $ sudo apt install -y gfortran
 
-    Code: fortran/howdy.f90
+  Code: fortran/howdy.f90
 
-            program howdy
+         program howdy
+         print *, "    ====> Fortran: Howdy, Windows!"
+         end program howdy
 
- print *, "    ====> Fortran: Howdy, Windows!"
+  Compilation
 
-end program howdy
+         $ gfortran fortran/howdy.f90 -o fortran/howdy
 
-    Compilation
-
-$ gfortran fortran/howdy.f90 -o fortran/howdy
-
-    Execution
+  Execution
 
         $ ./fortran/howdy
 
-    ====> Fortran: Howdy, Windows!
+  ====> Fortran: Howdy, Windows!
 
-    Pascal
+10. Pascal
 
-    Installation
+  Installation
 
-$ sudo apt install -y fp-compiler
+         $ sudo apt install -y fp-compiler
 
-    Code: pascal/howdy.pas
+  Code: pascal/howdy.pas
 
-        program Howdy;
+         program Howdy;
+         Begin
+         writeln('    ====> Pascal: Howdy, Windows!');
+         end.
 
-Begin
+  Compilation
 
-       writeln('    ====> Pascal: Howdy, Windows!');
-
-end.
-
-    Compilation
-
-$ pc pascal/howdy.pas
-
+         $ pc pascal/howdy.pas
+  
     Execution
-
         $ ./pascal/howdy
 
    ====> Pascal: Howdy, Windows!
 
-    Erlang
+11. Erlang
 
-    Installation
+  Installation
 
-$ sudo apt install -y erlang-base
+       $ sudo apt install -y erlang-base
 
-    Code: erlang/howdy.erl
+  Code: erlang/howdy.erl
 
         -module(howdy).
+        -export([howdy/0]).
+        howdy() -> io:fwrite("    ====> Erlang: Howdy, Windows!\n").
+  
+  Compilation
 
--export([howdy/0]).
+       $ erlc erlang/howdy.erl
 
-howdy() -> io:fwrite("    ====> Erlang: Howdy, Windows!\n").
-
-    Compilation
-
-$ erlc erlang/howdy.erl
-
-    Execution
+  Execution
 
         $ erl -noshell -s howdy howdy -s init stop
 
